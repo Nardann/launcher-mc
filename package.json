@@ -1,11 +1,11 @@
 {
-    "name": "RT-Launcher",
+    "name": "R-T-Launcher",
     "preductname": "R&T Launcher",
-    "version": "1.2.6",
-    "description": "Launcher Minecraft custom pour les R&T",
+    "version": "1.2.7",
+    "description": "Launcher Minecraft custom (crack, premium)",
     "main": "src/app.js",
     "author": "Nardann",
-    "url": "http://launcher.lorente.pro/launcher",
+    "url": "http://launcher.lorente.pro",
     "engines": {
         "node": "^18.x.x"
     },
@@ -20,7 +20,7 @@
     },
     "dependencies": {
         "electron-updater": "^5.0.1",
-        "minecraft-java-core": "^3.4.3",
+        "minecraft-java-core": "^3.1.1",
         "node-fetch": "^2.6.7"
     },
     "devDependencies": {
@@ -32,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Nardann/launcher-mc.git"
+        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
     }
 }

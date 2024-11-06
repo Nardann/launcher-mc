@@ -96,7 +96,7 @@ class Home {
             let launcherSettings = (await this.database.get('1234', 'launcher')).value;
 
             let playBtn = document.querySelector('.play-btn');
-            let info = document.querySelector(".text-download")
+            let info = document.querySelector(".download-content")
             let progressBar = document.querySelector(".progress-bar")
 
             if (Resolution.screen.width == '<auto>') {

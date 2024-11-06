@@ -1,311 +1,113 @@
+/* Harmonisation des couleurs */
+body {
+    background-color: #BAF3DB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Bottom bar */
 .bottom-bar-home {
+    left: 20%;
+    top: 80%;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 60%;
     height: 70px;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    background: #00000080;
+    border-radius: 40px;
+    background-color: #299568; /* Couleur foncée */
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.player-head {
-    margin: auto 30px;
-    background-image: url("../../images/default/setve.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
-}
-
-.player-head:hover {
-    border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
-}
-
-.settings-btn {
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    text-align: center;
-    height: 50px;
-    border: none;
-    border-radius: 15px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
-}
-
-.settings-btn:hover {
-    border-radius: 5px;
-    transition: all 0.5s cubic-bezier(1, 0.46, 0, 1.29);
-}
-
-.icon-settings:before {
-    font-size: 40px;
-}
-
-.play-element {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    height: 100%;
-    color: #F1F1F1;
-    font: normal normal bold 19px/29px Poppins;
+/* Bouton Jouer centré */
+.play-element, .server-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font: normal bold 19px Poppins;
     text-align: center;
 }
 
 .play-btn {
-    top: 10px;
     width: 160px;
-    height: 37px;
+    height: 60px;
     border-radius: 20px;
     border: none;
-    background: #00bd7a;
-    font: normal normal bold 20px/25px Poppins;
-    color: #121212;
-    margin: 15px 0;
-    box-shadow: 0 0 5px #00bd7a;
+    background-color: #299568; /* Couleur moyenne */
+    font: normal bold 30px Poppins;
+    color: #FFFFFF;
+    box-shadow: 0 0 8px #299568;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .download-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.text-download,
-.progress-bar {
     display: none;
 }
 
-.text-download {
-    font-size: 15px;
+.div-settings{
+    padding: 10px;
 }
 
-.progress-bar {
-    background-color: transparent;
-    height: 10px;
+.play-btn:hover {
+    background-color: #1F7A5B;
+    box-shadow: 0 0 12px #1F7A5B;
 }
 
-.progress-bar::-webkit-progress-bar {
-    background-color: #797979;
-    border-radius: 10px;
+/* Autres éléments de la barre du bas */
+.player-head, .settings-btn {
+    background-color: #BAF3DB; /* Couleur claire */
+    transition: background-color 0.3s ease;
 }
 
-.progress-bar::-webkit-progress-value {
-    background-color: #00bd7a;
-    border-radius: 10px;
+.player-head:hover, .settings-btn:hover {
+    background-color: #299568;
 }
 
+/* Style pour les serveurs dans body-home */
 .body-home {
     display: flex;
-    height: 78vh;
-    margin: 3rem 2rem;
-}
-
-.news-list {
-    position: relative;
-    overflow: auto;
-    width: 100%;
-}
-
-.news-list::-webkit-scrollbar {
-    width: 0;
-}
-
-.news-block {
-    margin-bottom: 1rem;
-    transition: opacity 1s;
-    opacity: .4;
-}
-
-.news-block:hover {
-    transition: opacity 1s;
-    opacity: 1;
-}
-
-.opacity-1 {
-    opacity: 1;
-}
-
-.news-header {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 87px;
-    background-color: #292929;
-    border-radius: 10px 10px 0px 0px;
-    transition: color .2s, filter .2s;
-}
-
-.title {
-    position: absolute;
-    font: normal normal bold 27px/40px Poppins;
-    letter-spacing: 0px;
-    color: #E1E1E1;
-    display: flex;
-    position: absolute;
-    text-decoration: none;
-    max-width: calc(100% - 158px);
-    font-weight: 600;
-    font-size: 18px;
-    top: 50%;
-    left: 30px;
-    transform: translate(0, -50%);
-    overflow: hidden;
-    line-height: 25px;
+    justify-content: center;
     align-items: center;
-    height: 3em;
-    transition: color .2s;
-}
-
-.date {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: #E1E1E1;
-    width: 75px;
-    text-align: center;
-    font-weight: 900;
-    font-family: Poppins;
-    transition: color .2s;
-}
-
-.day {
-    font-size: 28px;
-    margin-bottom: -10px;
-    display: block;
-}
-
-.month {
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.news-content {
-    position: relative;
-    width: 100%;
-}
-
-.bbWrapper {
-    position: relative;
-    padding: 20px;
-    background-color: #1f1f1f;
-    font-family: Poppins;
-    font-size: 13px !important;
-    color: #E1E1E1;
-    text-decoration: none;
-    border-radius: 0px 0px 10px 10px;
-    transition: color .2s;
-}
-
-.news-author {
-    text-align: end;
-    margin: 0;
-    color: #F1F1F1;
-}
-
-.news-author span {
-    font-style: italic;
+    margin: 3rem 2rem;
+    color: #FFFFFF;
 }
 
 .info-list {
-    position: relative;
-    width: 65vh;
-    padding-left: 1rem;
-    background: none;
+    background: #299568; /* Couleur moyenne */
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .server {
-    position: relative;
-    width: 100%;
-    height: 75px;
-    background-color: #292929;
+    display: flex;
+    align-items: center;
+    background-color: #1F7A5B;
     border-radius: 10px;
-    transition: opacity 1s;
-    opacity: .4;
+    margin-bottom: 1rem;
+    padding: 0px;
+    color: #FFFFFF;
 }
 
 .server:hover {
-    transition: opacity 1s;
-    opacity: 1;
+    background-color: #145643;
 }
 
-.server-img {
-    position: absolute;
-    width: 42px;
-    height: 45px;
-    top: 15px;
-    left: 15px;
+/* Textes et autres éléments */
+.name, .desc, .etat-text, .online {
+    color: #FFFFFF;
 }
 
-.name {
-    position: absolute;
-    font: normal normal bold 17px/25px Poppins;
-    color: #E1E1E1;
-    top: 17px;
-    left: 70px;
-    transition: color .2s;
-}
-
-.desc {
-    position: absolute;
-    font: normal normal normal 11px/17px Poppins;
-    color: #E1E1E1;
-    transition: all .2s;
-    top: 40px;
-    left: 70px;
-    transition: color .2s;
+.red {
+    color: #FF6B6B;
 }
 
 .green {
     color: #1AC707;
-}
-
-.red {
-    color: #FF0409;
-}
-
-.etat-text {
-    position: absolute;
-    top: 20px;
-    right: 14px;
-    width: 49px;
-    height: 33px;
-    background-color: #262626;
-    border-radius: 4px;
-    transition: background-color .2s;
-}
-
-.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font: normal normal bold 13px/15px Poppins;
-    letter-spacing: 0px;
-    color: #E1E1E1;
-    transition: color .2s;
-}
-
-.online {
-    position: absolute;
-    top: -6px;
-    left: 41px;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    border: 2px solid #1A1A1A;
-    transition: all .2s;
-    background-color: #1AC707;
-}
-
-.online.off {
-    background-color: #FF0409;
 }
