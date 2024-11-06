@@ -1,7 +1,7 @@
 {
     "name": "R-T-Launcher",
     "preductname": "R&T Launcher",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "description": "Launcher Minecraft custom (crack, premium)",
     "main": "src/app.js",
     "author": "Nardann",
@@ -32,6 +32,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/luuxis/Selvania-Launcher.git"
+        "url": "git+https://github.com/Nardann/launcher-mc.git"
     }
 }
