@@ -1,41 +1,34 @@
 {
-    "name": "R&T-Launcher",
-    "preductname": "R&t Launcher",
-    "version": "2.0.7",
-    "description": "Launcher Minceraft pour le serveur des r&t",
+    "name": "RT-Launcher",
+    "preductname": "R&T Launcher",
+    "version": "1.2.6",
+    "description": "Launcher Minecraft custom pour les R&T",
     "main": "src/app.js",
-    "author": {
-        "name": "Nardann.",
-        "email": "@Nardann",
-        "url": "https://github.com/Nardann"
-    },
+    "author": "Nardann",
     "url": "http://launcher.lorente.pro/launcher",
+    "engines": {
+        "node": "^18.x.x"
+    },
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
-        "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
-        "build": "node build.js --obf=true --build=platform",
-        "icon": "node build.js --icon=https://raw.githubusercontent.com/luuxis/Selvania-Launcher/master/src/assets/images/icon.png"
+        "build": "node build.js --obf=true",
+        "dev": "nodemon --exec npm start"
     },
-    "license": "CCANC",
+    "license": "CC0",
     "nodemonConfig": {
-        "ext": "js,html,css",
-        "ignore": "**/test"
+        "ext": "js,html,css"
     },
     "dependencies": {
-        "electron-updater": "^6.1.8",
-        "minecraft-java-core": "^3.10.4",
-        "node-bdd": "^2.0.4",
-        "node-fetch": "^2.7.0",
-        "xml-js": "^1.6.11"
+        "electron-updater": "^5.0.1",
+        "minecraft-java-core": "^3.4.3",
+        "node-fetch": "^2.6.7"
     },
-    "devDependencies": { 
+    "devDependencies": {
         "cross-env": "^7.0.3",
-        "electron": "^30.0.9",
-        "electron-builder": "^24.13.3",
-        "javascript-obfuscator": "^4.1.0",
-        "jimp": "^0.22.12",
-        "nodemon": "^3.1.2",
-        "png2icons": "^2.0.1"
+        "electron": "^20.0.0",
+        "electron-builder": "^23.0.3",
+        "javascript-obfuscator": "^4.0.2",
+        "nodemon": "^2.0.16"
     },
     "repository": {
         "type": "git",
