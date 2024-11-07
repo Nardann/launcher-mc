@@ -24,11 +24,13 @@ function createWindow() {
     destroyWindow();
     mainWindow = new electron.BrowserWindow({
         title: pkg.preductname,
-        width: 1280,
+        width: 900,
         height: 720,
-        minWidth: 980,
-        minHeight: 552,
-        resizable: true,
+        minWidth: 900,
+        minHeight: 720,
+        maxWidth: 900,
+        maxHeight: 720,
+        resizable: false,
         icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"}`,
         transparent: os.platform() === 'win32',
         frame: os.platform() !== 'win32',
@@ -40,6 +42,7 @@ function createWindow() {
     });
     electron.Menu.setApplicationMenu(null);
     mainWindow.setMenuBarVisibility(false);
+    mainWindow.webContents.openDevTools()
     mainWindow.loadFile(path.join(electron.app.getAppPath(), 'src', 'launcher.html'));
     mainWindow.once('ready-to-show', () => {
         if (mainWindow) {

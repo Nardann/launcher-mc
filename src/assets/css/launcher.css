@@ -25,7 +25,7 @@ img {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 26px;
+    height: 52px;
     -webkit-app-region: drag;
     z-index: 11;
     display: none;
@@ -49,8 +49,8 @@ img {
 .button-frame {
     position: relative;
     display: table-cell;
-    width: 30px;
-    height: 26px;
+    width: 60px;
+    height: 52px;
     transition: color .2s, background-color .2s;
     color: black;
     cursor: pointer;
@@ -61,21 +61,19 @@ img {
 }
 
 .icon-minimize:hover,
-.icon-restore-down:hover,
-.icon-maximize:hover {
+.icon-restore-down:hover {
     background-color: #0000009d;
 }
 
 .icon-close:before,
 .icon-minimize:before,
-.icon-maximize:before,
 .icon-restore-down:before {
     position: absolute;
-    top: 6px;
-    left: 8px;
-    width: 14px;
-    height: 14px;
-    font-size: 14px;
+    top: 12px;
+    left: 16px;
+    width: 28px;
+    height: 28px;
+    font-size: 28px;
     color: #f8f9f9;
 }
 
